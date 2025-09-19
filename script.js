@@ -46,7 +46,7 @@ function unlockMessage(){
   const input = document.getElementById('secretInput').value.toLowerCase();
   const secretMsg = document.getElementById('secretMsg');
   if(input === 'jenni'){
-    alert('💖 Secret Message: Walaupun kamu udh tau, tapo tetep aku ingetin lagi kalo aku sayang banget sama kamu! 🥰');
+    alert('💖 Secret Message: Walaupun kamu udh tau, tapi tetep aku ingetin lagi kalo aku sayang banget sama kamu! 🥰');
     secretMsg.innerText = '🎉 Secret unlocked!';
   } else {
     secretMsg.innerText = 'Hmm coba lagi deh 😏';
