@@ -1,0 +1,111 @@
+/* Base */
+body {
+  font-family: 'Poppins', sans-serif;
+  background: #fff7fb;
+  color: #4b0000;
+  margin: 0;
+  text-align: center;
+}
+header h1 { color: #e91e63; margin: .8rem 0 0.2rem 0; font-size: 2rem; }
+
+/* Music player under title */
+.music-player {
+  margin: 0.4rem auto 1rem;
+  padding: 0.6rem;
+  max-width: 420px;
+  background: #ffe6f0;
+  border-radius: 10px;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.08);
+}
+.music-player p { margin: 0; color: #d81b60; font-weight: 600; font-size: .95rem; }
+.btn-music {
+  background: #f8bbd0; border: none; border-radius: 8px; padding: 6px 14px; cursor: pointer;
+  transition: background 0.25s;
+}
+.btn-music:hover { background: #e91e63; color: #fff; }
+
+/* Slideshow */
+.slideshow-container { max-width: 900px; margin: 1rem auto; }
+.slideshow-container .slides { display: none; }
+.slideshow-container .slides img { width: 100%; border-radius: 12px; box-shadow: 0 6px 12px rgba(0,0,0,0.15); }
+
+/* Invitation at end */
+.invitation {
+  background: #ffe6f0; padding: 1.5rem; margin:1.5rem auto; max-width:520px; border-radius:16px;
+  box-shadow:0 4px 8px rgba(0,0,0,0.1);
+}
+.invitation h2 { color:#d81b60; }
+.invitation-footer { margin-top:0.8rem;font-weight:bold; }
+
+/* Quiz styling more romantic & playful */
+.quiz {
+  background: #fff0f6;
+  border: 2px dashed #f8bbd0;
+  border-radius: 16px;
+  padding: 1.5rem;
+  max-width: 900px; margin: 1rem auto;
+}
+.quiz h3 { text-align:center; color:#d81b60; }
+.question { margin-bottom: 1rem; padding: 0.8rem; background: #ffe6f0; border-radius: 12px; box-shadow:0 2px 6px rgba(0,0,0,0.05); }
+.quiz-input { display:block; width:100%; margin:6px 0; padding:8px; border:1px solid #f8bbd0; border-radius:8px; }
+.quiz-input:focus { border-color:#e91e63; box-shadow: 0 0 6px rgba(233,30,99,0.2); }
+.quiz-result { display:block; margin-top:6px; font-weight:bold; }
+.quiz-result.correct { color:#4caf50; }
+.quiz-result.wrong { color:#e91e63; }
+
+/* Buttons */
+.btn-answer, .btn-love, .btn-secret, .btn-spin {
+  background:#f8bbd0; color:#fff; border:none; padding:8px 12px; border-radius:8px; cursor:pointer; margin-top:6px;
+  position:relative; overflow:visible;
+}
+.btn-answer:hover, .btn-love:hover, .btn-secret:hover, .btn-spin:hover { background:#d81b60; }
+
+/* Glowing effect behind buttons */
+.btn-answer::after, .btn-love::after, .btn-secret::after, .btn-spin::after {
+  content:""; position:absolute; top:-4px; left:-4px; right:-4px; bottom:-4px; border-radius:12px;
+  background: linear-gradient(45deg,#f8bbd0,#e91e63,#f48fb1,#f06292);
+  z-index:-1; filter:blur(8px); opacity:0.5; animation:glowing 3s linear infinite;
+}
+@keyframes glowing { 0%{background-position:0 0;}50%{background-position:400% 0;}100%{background-position:0 0;} }
+
+/* Funfacts, lovenotes, secret, wheel */
+.funfacts, .lovenotes, .secret, .wheel {
+  max-width:800px; margin:1rem auto; text-align:left; padding:1rem; background:#fff; border-radius:12px; box-shadow:0 4px 10px rgba(0,0,0,0.06);
+}
+.lovenotes h3, .funfacts h3, .secret h3, .wheel h3 { color:#d81b60; }
+
+/* Wheel canvas */
+#wheelCanvas { border:5px solid #f8c8d8; border-radius:50%; background:#fff5f5; display:block; margin:0 auto; }
+
+/* Love notes */
+.love-note { margin-top:10px; color:#d81b60; font-weight:bold; }
+.fade-note { animation: fadeInOut 3s ease-in-out forwards; }
+
+@keyframes fadeInOut { 0%{opacity:0; transform:translateY(-10px);} 10%{opacity:1; transform:translateY(0);} 90%{opacity:1;} 100%{opacity:0; transform:translateY(-10px);} }
+
+/* Secret message */
+.secret-input { padding:6px; border-radius:6px; border:1px solid #ccc; }
+.secret-msg { margin-top:10px; color:#d81b60; font-weight:bold; }
+
+/* Emoji */
+.emoji-react { text-align:center; margin:2rem 0; }
+.emoji-btn { font-size:1.8rem; margin:0.3rem; cursor:pointer; background:none; border:none; transition:transform .15s; }
+.emoji-btn:hover { transform:scale(1.2); }
+
+/* Gift */
+.gift-box { font-size:3rem; cursor:pointer; animation:bounce 1.5s infinite; display:inline-block; }
+@keyframes bounce { 0%,100%{transform:translateY(0);} 50%{transform:translateY(-10px);} }
+.gift-msg { margin-top:10px; color:#d81b60; font-weight:bold; }
+
+/* Floating hearts */
+#hearts-container { position:fixed; width:100%; height:100%; top:0; left:0; pointer-events:none; z-index:0; }
+
+/* Footer */
+footer { margin:2rem 0; color:#4b0000; }
+
+/* small responsive tweaks */
+@media (max-width:600px) {
+  header h1 { font-size:1.5rem; }
+  .music-player { max-width:95%; }
+  .slideshow-container { padding:0 1rem; }
+}

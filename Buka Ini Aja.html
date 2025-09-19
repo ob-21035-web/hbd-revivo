@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Happy Birthday, Sayang ❤️</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+ 
+  <header>
+    <h1 id="typing-title"></h1>
+
+    <div class="music-player">
+      <p>🎶 Now Playing: <b>Long Live - (Taylor Swift)</b></p>
+      <button id="music-toggle" class="btn-music">⏸ Pause</button>
+    </div>
+
+    <audio id="bg-music" autoplay loop>
+      <source src="assets/longlive.mp3" type="audio/mpeg">
+    </audio>
+
+    <p>
+      Tepat di tanggal ini, 25 tahun yang lalu, dunia kedatangan manusia extrovert yang selalu spread happiness ke orang-orang di sekitarnya. Siapa sangka sekarang orangnya punya title baru: <b><i>my one and only</i></b> (GAUSAH SENYUM-SENYUM BACANYA HAHAHA). 🥰
+    </p>
+    <p>
+      So, today I just wanna say thank you to your parents (for creating such a masterpiece 😎) and to God for sending you into this world exactly the way you are now. I feel sooo blessed and excited to celebrate your birthday this year. Your very first birthday with me, and also the first one with me as your girlfriend. 😋
+    </p>
+  </header>
+
+  
+  <div class="slideshow-container">
+    <div class="slides"><img src="assets/foto 1.jpg" alt="Foto utama"></div>
+    <div class="slides"><img src="assets/foto 2.jpg" alt="Foto pelengkap 1"></div>
+    <div class="slides"><img src="assets/foto 3.jpg" alt="Foto pelengkap 2"></div>
+    <div class="slides"><img src="assets/foto 4.jpg" alt="Foto pelengkap 3"></div>
+  </div>
+
+
+  <section class="quiz">
+    <h3>Mini Quiz Pemicu Peperangan — Do you really know your girlfriend? 💕</h3>
+
+    <div class="question">
+      <p>1. Apa tempat yang paling berkesan buat aku? 🌸</p>
+      <input type="text" id="q1" class="quiz-input" placeholder="Tulis jawabanmu...">
+      <button class="btn-answer" onclick="checkAnswer('q1','mcd','r1')">Cek Jawaban</button>
+      <span id="r1" class="quiz-result"></span>
+    </div>
+
+    <div class="question">
+      <p>2. Film pertama yang kita tonton bareng adalah? 🎬</p>
+      <input type="text" id="q2" class="quiz-input" placeholder="Tulis jawabanmu...">
+      <button class="btn-answer" onclick="checkAnswer('q2','jumbo','r2')">Cek Jawaban</button>
+      <span id="r2" class="quiz-result"></span>
+    </div>
+
+    <div class="question">
+      <p>3. Apa comfort food aku kalo lagi stress? 🍦</p>
+      <input type="text" id="q3" class="quiz-input" placeholder="Tulis jawabanmu...">
+      <button class="btn-answer" onclick="checkAnswer('q3','kamu','r3')">Cek Jawaban</button>
+      <span id="r3" class="quiz-result"></span>
+    </div>
+
+    <div class="question">
+      <p>4. Tiap kamu lagi ngejokes garing, apa kata yang selalu aku keluarin? 🤭</p>
+      <input type="text" id="q4" class="quiz-input" placeholder="Tulis jawabanmu...">
+      <button class="btn-answer" onclick="checkAnswer('q4','apasih','r4')">Cek Jawaban</button>
+      <span id="r4" class="quiz-result"></span>
+    </div>
+
+    <div class="question">
+      <p>5. Kalau disuruh milih makan ayam goreng atau sushi, aku bakal pilih makan apa? 🍣</p>
+      <input type="text" id="q5" class="quiz-input" placeholder="Tulis jawabanmu...">
+      <button class="btn-answer" onclick="checkAnswer('q5','makan kamu','r5')">Cek Jawaban</button>
+      <span id="r5" class="quiz-result"></span>
+    </div>
+  </section>
+
+
+  <section class="funfacts">
+    <h3>Random Fun Facts ❤️</h3>
+    <ol>
+      <li>Semenjak sm km aku jadi tidak denial dengan hal romantis.</li>
+      <li>Aku suka ngeliatin kamu kalo lg ngewasitin karna ganteng anjay WKWK.</li>
+      <li>Kalo kata "rumah" jadi wujud manusia, pasti wujudnya kamu 😎.</li>
+      <li>Setiap denger lagu yang sweet-sweet gitu aku pasti kepikirannya kamu terus jadi kek "HAAA SAYANG BANGETTT".</li>
+      <li>AKU GA PERNAH BOSEN NEMENIN KAMU DAN SELALU SENENG BGT WALAUPUN KADANG KY NGERASA KOK PENGANGGURAN BGT YA GW WKWKWK 😭🙏🏼</li>
+    </ol>
+  </section>
+
+
+  <section class="lovenotes">
+    <h3>Tap for Love Notes 💌</h3>
+    <button class="btn-love" onclick="showLoveNote()">Tap me 100x!</button>
+    <p id="loveNote" class="love-note"></p>
+  </section>
+
+
+  <section class="secret">
+    <h3>Secret Message 🔐</h3>
+    <p>Ketik 1 kata yang ada di pikiran kamu:</p>
+    <input type="text" id="secretInput" placeholder="Hint: sayang" class="secret-input">
+    <button class="btn-secret" onclick="unlockMessage()">Unlock</button>
+    <p id="secretMsg" class="secret-msg"></p>
+  </section>
+
+  <section class="wheel">
+    <h3>Spin the Wheel 🎡</h3>
+    <canvas id="wheelCanvas" width="300" height="300"></canvas><br>
+    <button class="btn-spin" onclick="spinWheel()">Spin!</button>
+    <p id="wheelResult" class="wheel-result"></p>
+  </section>
+
+
+  <div class="invitation">
+    <h2>Since today's your birthday, you'll be my passenger prince for this whole day! Here's your HARUS MAU invitation</h2>
+    <h2>Passenger Prince Invitation 🚗👑</h2>
+    <p><b>📍 Place:</b> Braci(Kalo kemaleman ke Fork aja yaw :3)</p>
+    <p><b>📅 Date:</b> 20 Sept 2025</p>
+    <p><b>🕒 Time:</b> Menyesuaikan jadwal kamu — yang pasti malem, biar romantis anjay 😋✨</p>
+    <p><b>👔 Outfit:</b> Apa aja, asal ganteng (which is always 😏)</p>
+    <p class="invitation-footer">See you there, Passenger Prince! 😎</p>
+  </div>
+
+
+  <section class="emoji-react">
+    <h3>Tap Your Reaction For This Invitation 😘</h3>
+    <button class="emoji-btn" onclick="dropEmoji('😍')">😍</button>
+    <button class="emoji-btn" onclick="dropEmoji('😂')">😂</button>
+    <button class="emoji-btn" onclick="dropEmoji('😘')">😘</button>
+    <button class="emoji-btn" onclick="dropEmoji('🤩')">🤩</button>
+  </section>
+
+
+  <section class="gift">
+    <h3>Tap Your Special Gift 🎁</h3>
+    <div class="gift-box" onclick="openGift()">🎁</div>
+    <p id="gift-msg" class="gift-msg"></p>
+  </section>
+
+  <div id="hearts-container"></div>
+
+
+  <footer>Made with ❤️ just for you ✨</footer>
+
+
+  <script src="script.js"></script>
+</body>
+</html>
